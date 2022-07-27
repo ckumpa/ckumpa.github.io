@@ -21,7 +21,7 @@ baseurl: ""
 url: "https://scriptor-jekyll.netlify.com"
 
 # Favicon
-favicon: desktop/dragonfly
+favicon: images/favicon.png
 
 # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 google_analytics: ""
@@ -37,11 +37,11 @@ navigation:
 disqus: justgoodthemes
 
 # Colors
-accent_color: '#B2AC88'
+accent_color: '#2d72d9'
 
 # Site footer
 footer:
-  content: "&copy; Scriptor all rights reserved. Theme by [JustGoodThemes](https://www.justgoodthemes.com) and me, Caroline."
+  content: "&copy; Scriptor all rights reserved. Theme by [JustGoodThemes](https://www.justgoodthemes.com)."
   has_social: true
 
 # Plugins
