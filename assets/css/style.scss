@@ -30,13 +30,13 @@ $font: (
 );
 
 // Palette.
-{% assign accent = site.accent_color | default: '#2d72d9' %}
+{% assign accent = site.accent_color | default: '#B2AC88' %}
 $palette: (
   accent:    {{ accent }},
   primary:   #6b747a,
   secondary: #2c343c,
   meta:      #9ba6ad,
-  border:    #d7d7d7,
+  border:    #B2AC88,
   bg:        #fbfbfb
 );
 
