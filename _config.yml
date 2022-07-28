@@ -12,7 +12,7 @@ lang: en-US
 title: "Caroline Kumpa"
 
 # A description of your site for meta tag, search engine results.
-description: "Hi! This is my personal website that is a work in progress."
+description: "Hi! This is my personal website, a work in progress."
 
 # The subpath of your site, e.g. /blog, for generating urls.
 baseurl: ""
