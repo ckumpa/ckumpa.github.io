@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Page Not Found
+title: Projects
 permalink: /projects/
 ---
 
