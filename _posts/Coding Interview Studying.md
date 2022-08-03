@@ -11,5 +11,13 @@ Studying for the coding interview is extremely stressful. That is why I am motiv
 <!--more-->
 
 ## Subtree of Another Tree - LeetCode #572
-
+{% highlight javascript %}
+function sayHello(name) {
+  if (!name) {
+    console.log('Hello World');
+  } else {
+    console.log(`Hello ${name}`);
+  }  
+}  
+{% endhighlight %}
 
