@@ -10,14 +10,18 @@ Studying for the coding interview is extremely stressful. That is why I am motiv
 
 <!--more-->
 
-## Subtree of Another Tree - LeetCode #572
-{% highlight javascript %}
-function sayHello(name) {
-  if (!name) {
-    console.log('Hello World');
-  } else {
-    console.log(`Hello ${name}`);
-  }  
-}  
-{% endhighlight %}
+## Subtree of Another Tree - LeetCode 572
+```java
+{"menu": {
+  "id": "file",
+  "value": "File",
+  "popup": {
+    "menuitem": [
+      {"value": "New", "onclick": "CreateNewDoc()"},
+      {"value": "Open", "onclick": "OpenDoc()"},
+      {"value": "Close", "onclick": "CloseDoc()"}
+    ]
+  }
+}}
+```
 
