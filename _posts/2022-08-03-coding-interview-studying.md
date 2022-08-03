@@ -61,6 +61,14 @@ So, let's start with **case 1**: the subtree and the root are the same! Best cas
 
 We basically need to check for every node, if they have the same values.
 
+If they are entirely the same, starting at the root, you would just call our traverser helper method and check every single node. 
+
+```java
+if(isSubtreeHelper(root, subRoot)){
+            return true;
+}
+```
+
 Since we will be traversing both trees at the same time and we could find out at any point that they are different sizes, we should first check to see if either is null. If one is null and the other one isnt, this means it would return `false` since they should be the same. 
 
 ```java
@@ -74,16 +82,45 @@ Otherwise, if they both are not null, we want to see if their values are the sam
 But, we also need to check the right and left children/subtrees of this node as well. We want `root.val == subRoot.val` **and** all the values in the right subtree to be the same **and** all the values in the left subtree to be the same.
 
 ```java
-if(root == null || subRoot == null){
-  return root == subRoot;
-}
-return root.val == subRoot.val && isSubtreeHelper(root.right, subRoot.right) && isSubtreeHelper(root.left, subRoot.left);
+public boolean isSubtreeHelper(TreeNode root, TreeNode subRoot){
+        if(root == null || subRoot == null){
+            return root == subRoot;            
+        }
+        return root.val == subRoot.val && isSubtreeHelper(root.right, subRoot.right) && isSubtreeHelper(root.left, subRoot.left);
+    }
 ```
 
 Now we have a helper method that traverses through each subtree and checks if its equal to the subRoot tree.
 
+In the other **cases 2 and 3** where the `subRoot` subtree lies inside the right or left subtrees, we have to have another recursive call for each one. It just has to be for one or the other, so:
 
+```java
+ return isSubtree(root.right, subRoot) || isSubtree(root.left, subRoot);
+ ```
 
+We are done!
+```java
+class Solution {
+    public boolean isSubtree(TreeNode root, TreeNode subRoot) {
+        if(root == null){
+            return false;
+        }
+        if(isSubtreeHelper(root, subRoot)){
+            return true;
+        }
+        return isSubtree(root.right, subRoot) || isSubtree(root.left, subRoot);
+    }
+    
+    public boolean isSubtreeHelper(TreeNode root, TreeNode subRoot){
+        if(root == null || subRoot == null){
+            return root == subRoot;            
+        }
+        return root.val == subRoot.val && isSubtreeHelper(root.right, subRoot.right) && isSubtreeHelper(root.left, subRoot.left);
+    }
+}
+```
+
+You have a helper function that traverses each subtree individually to see if this condition is true. You recurse through the subtrees using your main `isSubtree` function, and rely on your helper method to do the heavy lifting.
 
 
 
